@@ -13,6 +13,7 @@
 
   /* Colors */
   --red: hsl(14, 86%, 42%);
+  --red-hover: hsl(14, 86%, 32%);
   --green: hsl(159, 69%, 38%);
 
   --rose-50: hsl(20, 50%, 98%);
@@ -21,4 +22,91 @@
   --rose-400: hsl(7, 20%, 60%);
   --rose-500: hsl(12, 20%, 44%);
   --rose-900: hsl(14, 65%, 9%);
+}
+
+body{
+  background: var(--rose-100);
+}
+
+/* Utility Classes */
+.spacing{
+  margin: 100px 0;
+}
+
+.btn{
+  cursor: pointer;
+  border: 1px solid var(--red);
+  border-radius: 100px;
+  height: 40px;
+  font-size: 16px;
+  font-weight: var(--font-w-600);
+  background: var(--rose-50);
+  color: var(--rose-900);
+}
+
+.btn:hover{
+  background: var(--red);
+  color: var(--rose-50);
+}
+
+.padding{
+  padding: 20px 100px;
+}
+
+.img-size{
+  width: 50%;
+}
+
+ul{
+  list-style-type: none;
+}
+
+li a{
+  text-decoration: none;
+  color: var(--red);
+  font-weight: var(--font-w-600);
+  font-size: 20px;
+}
+
+li a:hover{
+  color: var(--red-hover);
+}
+
+/* Components */
+
+/* Nav Component */
+
+.nav-container{
+  background: var(--rose-50);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-list{
+  display: flex;
+  gap: 40px;
+}
+
+/* Hero Component */
+
+.hero-container, .aboutHP-container{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.img-diner, .img-cake{
+  width: 50%;
+  border-radius: 10px;
+}
+
+.hero-content, .aboutHp-content{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hero-btn{
+  width: 20%;
 }

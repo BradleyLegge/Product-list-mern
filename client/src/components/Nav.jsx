@@ -2,13 +2,19 @@ import React from "react";
 
 const Nav = () => {
   return (
-    <div>
+    <div className="nav-container padding">
       <h1>Brads Dessert Diner</h1>
-      <nav>
-        <ul>
-          <li>Products</li>
-          <li>About</li>
-          <li>Log-in</li>
+      <nav className="navbar">
+        <ul className="navbar-list">
+          <li>
+            <a href="#">Products</a>
+          </li>
+          <li>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="#">Log-in</a>
+          </li>
         </ul>
       </nav>
     </div>
