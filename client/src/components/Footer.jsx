@@ -4,7 +4,7 @@ import { NavLink } from "react-router";
 
 const Footer = () => {
   return (
-    <div className="footer-container padding">
+    <div className="footer-container padding top">
       <h2>Brads Dessert Diner</h2>
       <nav className="navbar">
         <ul className="navbar-list">
@@ -15,7 +15,7 @@ const Footer = () => {
             <NavLink to="/shop">Shop</NavLink>
           </li>
           <li>
-            <NavLink to="/login">Log-in</NavLink>
+            <NavLink to="/login">Login</NavLink>
           </li>
         </ul>
       </nav>

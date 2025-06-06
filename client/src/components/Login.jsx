@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router";
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -14,26 +15,32 @@ const Login = () => {
 
   return (
     <div className="login-container padding spacing">
-      <h2>Log-in</h2>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Username:
+      <h2>Login</h2>
+      <form className="login-form" onSubmit={handleSubmit}>
+        <div className="form-item">
+          <label>Email</label>
           <input
             type="text"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           />
-        </label>
-        <label>
-          Password:
+        </div>
+        <div className="form-item">
+          <label>Password</label>
           <input
-            type="text"
+            type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-        </label>
-        <button>Submit</button>
+        </div>
+        <button className="btn-login btn">Log-in</button>
       </form>
+      <div className="need-account">
+        <p>Don't have an account?</p>
+        <Link className="signup-link" to="/signup">
+          Sign Up
+        </Link>
+      </div>
     </div>
   );
 };

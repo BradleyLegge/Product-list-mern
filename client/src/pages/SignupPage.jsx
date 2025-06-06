@@ -1,14 +1,16 @@
 import React from "react";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
+import Signup from "../components/Signup";
 
-const ShopPage = () => {
+const SignupPage = () => {
   return (
-    <div className="shop-page">
+    <div className="signup-page">
       <Nav />
+      <Signup />
       <Footer />
     </div>
   );
 };
 
-export default ShopPage;
+export default SignupPage;
