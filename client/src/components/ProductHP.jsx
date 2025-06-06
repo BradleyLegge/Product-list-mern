@@ -1,5 +1,6 @@
 import React from "react";
 import diner from "../imgs/diner-unsplash.jpg";
+import { Link } from "react-router";
 
 const ProductHP = () => {
   return (
@@ -12,7 +13,9 @@ const ProductHP = () => {
           ducimus non quibusdam est architecto! Consequuntur temporibus dicta
           cupiditate distinctio quis.
         </p>
-        <button className="hero-btn btn">Shop</button>
+        <Link to="/shop">
+          <button className="hero-btn btn">Shop</button>
+        </Link>
       </div>
     </div>
   );

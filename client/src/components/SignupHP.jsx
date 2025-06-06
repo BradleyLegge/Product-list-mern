@@ -1,5 +1,6 @@
 import React from "react";
 import cake from "../imgs/cake-unsplash.jpg";
+import { Link } from "react-router";
 
 const SignupHP = () => {
   return (
@@ -11,7 +12,9 @@ const SignupHP = () => {
           doloremque ut tempore neque amet molestiae sint laboriosam illo alias
           vitae facere iste nesciunt!
         </p>
-        <button className="hero-btn btn">Sign Up</button>
+        <Link to="/signup">
+          <button className="hero-btn btn">Sign Up</button>
+        </Link>
       </div>
       <img className="img-cake" src={cake} alt="" />
     </div>
