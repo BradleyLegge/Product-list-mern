@@ -1,15 +1,17 @@
 import React from "react";
 import Nav from "../components/Nav";
-import Hero from "../components/Hero";
-import AboutHP from "../components/aboutHP";
+import ProductHP from "../components/ProductHP";
+import SignupHP from "../components/SignupHP";
+import Footer from "../components/Footer";
 
 const HomePage = () => {
   return (
-    <>
+    <div className="homepage">
       <Nav />
-      <Hero />
-      <AboutHP />
-    </>
+      <ProductHP />
+      <SignupHP />
+      <Footer />
+    </div>
   );
 };
 

@@ -1,11 +1,11 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: "Red Hat Text", sans-serif;
 }
 
-:root{
+:root {
   /* Font Weights */
   --font-w-400: 400;
   --font-w-600: 600;
@@ -24,16 +24,25 @@
   --rose-900: hsl(14, 65%, 9%);
 }
 
-body{
+body {
   background: var(--rose-100);
 }
 
 /* Utility Classes */
-.spacing{
+.spacing {
   margin: 100px 0;
 }
 
-.btn{
+.container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.padding {
+  padding: 20px 100px;
+}
+
+.btn {
   cursor: pointer;
   border: 1px solid var(--red);
   border-radius: 100px;
@@ -44,69 +53,112 @@ body{
   color: var(--rose-900);
 }
 
-.btn:hover{
+.btn:hover {
   background: var(--red);
   color: var(--rose-50);
 }
 
-.padding{
-  padding: 20px 100px;
-}
-
-.img-size{
+.img-size {
   width: 50%;
 }
 
-ul{
+ul {
   list-style-type: none;
 }
 
-li a{
+li a {
   text-decoration: none;
   color: var(--red);
   font-weight: var(--font-w-600);
   font-size: 20px;
 }
 
-li a:hover{
+li a:hover {
   color: var(--red-hover);
+}
+
+h1 {
+  color: var(--rose-900);
 }
 
 /* Components */
 
 /* Nav Component */
 
-.nav-container{
+.nav-container {
   background: var(--rose-50);
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.navbar-list{
+.navbar-list {
   display: flex;
   gap: 40px;
 }
 
 /* Hero Component */
 
-.hero-container, .aboutHP-container{
+.productHP-container,
+.signupHP-container {
   display: flex;
   align-items: center;
   gap: 30px;
 }
 
-.img-diner, .img-cake{
+.img-diner,
+.img-cake {
   width: 50%;
   border-radius: 10px;
 }
 
-.hero-content, .aboutHp-content{
+.productHP-content,
+.signupHP-content {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.hero-btn{
+.hero-btn {
   width: 20%;
+}
+
+/* Footer Component */
+
+.footer-container {
+  background: var(--rose-50);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+}
+
+.social {
+  color: var(--rose-900);
+  width: 25px;
+  height: 25px;
+}
+
+.social:hover {
+  color: var(--red);
+}
+
+/* Login Component */
+
+.login-container {
+  flex: 1;
+}
+
+/* Pages */
+
+/* Login Page */
+
+.login-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
