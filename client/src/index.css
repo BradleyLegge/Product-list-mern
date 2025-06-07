@@ -240,6 +240,43 @@ h1 {
   color: var(--red);
 }
 
+.btn-add-remove-cart{
+  position: relative;
+  top: -20px;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+  background: var(--red);
+  height: 40px;
+  border-radius: 100px;
+  color: var(--rose-50);
+}
+
+
+.btn-subtract, .btn-add{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  width: 25px;
+  height: 25px;
+  background: var(--red);
+  color: var(--rose-50);
+  border: 1px solid var(--rose-50);
+  font-size: 24px;
+}
+
+.btn-subtract:hover, .btn-add:hover{
+  cursor: pointer;
+  background: var(--rose-50);
+  color: var(--red);
+}
+
 .img-shopping-cart {
   color: var(--red);
   width: 20px;
@@ -270,6 +307,56 @@ h1 {
   width: 100%;
 }
 
+/* Cart Component */
+
+.cart-container{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  background: var(--rose-50);
+  width: 30%;
+  height: 100%;
+  margin-top: 100px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.cart-header{
+  color: var(--red)
+}
+
+.empty-cart-info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.empty-cart-info p{
+  color: var(--rose-500);
+  font-weight: var(--font-w-600);
+}
+
+.items-in-cart-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-item-ordered{
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-item-info{
+  display: flex;
+  gap: 20px;
+}
+
+.divider{
+  margin: 10px 0;
+  border: 1px solid var(--rose-100);
+}
+
 /* Pages */
 
 /* Login Page */
@@ -280,4 +367,11 @@ h1 {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+/* Shop Page */
+
+.shop-page-content{
+  display: flex;
+  padding-right: 100px;
 }
