@@ -1,9 +1,15 @@
 import React, { useState } from "react";
-import { FaMinus, FaShoppingCart, FaPlus } from "react-icons/fa";
+import { FaShoppingCart } from "react-icons/fa";
 
-const Item = ({ item }) => {
+const Item = ({ item, index }) => {
   const [addRemoveBtn, setAddRemoveBtn] = useState("true");
   const [orderAmount, setOrderAmount] = useState(1);
+  const [cart, setCart] = useState([]);
+
+  const handleCart = () => {
+    setCart([...cart, { item, index }]);
+    console.log(cart);
+  };
 
   const handleSubtract = () => {
     if (orderAmount < 2) {
@@ -27,15 +33,15 @@ const Item = ({ item }) => {
           Add to Cart
         </button>
       ) : (
-        <div className="btn-add-remove-cart">
-          <button onClick={handleSubtract} className="btn-subtract">
+        <button onClick={handleCart} className="btn-add-remove-cart">
+          <div onClick={handleSubtract} className="btn-subtract">
             -
-          </button>
+          </div>
           <span>{orderAmount}</span>
-          <button onClick={handleAdd} className="btn-add">
+          <div onClick={handleAdd} className="btn-add">
             +
-          </button>
-        </div>
+          </div>
+        </button>
       )}
 
       <div className="item-info">

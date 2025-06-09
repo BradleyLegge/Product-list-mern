@@ -7,7 +7,7 @@ const Items = () => {
   return (
     <div className="items-container padding spacing">
       {items.map((item, index) => (
-        <Item key={index} item={item} />
+        <Item key={index} item={item} index={index} />
       ))}
     </div>
   );
