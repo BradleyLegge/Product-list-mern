@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
 import items from "../data.json";
-import { FaShoppingCart } from "react-icons/fa";
 import Item from "./Item";
 
 const Items = () => {
@@ -9,7 +8,7 @@ const Items = () => {
       {items.map((item, index) => (
         <Item key={index} item={item} index={index} />
       ))}
-    </div>
+     </div>
   );
 };
 
