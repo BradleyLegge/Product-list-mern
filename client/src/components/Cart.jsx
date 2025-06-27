@@ -16,7 +16,7 @@ const Cart = () => {
         <h2 className="cart-header">Your Cart (0)</h2>
         <div className="cart-item-ordered">
           <div className="cart-item-content">
-            <p className="cart-item-name">Item Name</p>
+            <p className="cart-item-name">Your item name</p>
             <div className="cart-item-info">
               <p className="amount-ordered">1x</p>
               <p className="item-cost">@$5.50</p>

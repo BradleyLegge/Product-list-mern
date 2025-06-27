@@ -1,24 +1,21 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 
 const Item = ({ item, index }) => {
   const [addRemoveBtn, setAddRemoveBtn] = useState("true");
-  const [orderAmount, setOrderAmount] = useState(1);
+  const [orderAmount, setOrderAmount] = useState(0);
   const [cart, setCart] = useState([]);
 
-  const handleCart = () => {
-    setCart([...cart, { item, index }]);
-    console.log(cart);
+  const handleAdd = (item) => {
+    setOrderAmount(orderAmount + 1);
+    setCart([...cart, item]);
+    console.log(cart.length);
   };
 
   const handleSubtract = () => {
     if (orderAmount < 2) {
       setAddRemoveBtn(true);
     } else setOrderAmount(orderAmount - 1);
-  };
-
-  const handleAdd = () => {
-    setOrderAmount(orderAmount + 1);
   };
 
   return (
@@ -33,15 +30,15 @@ const Item = ({ item, index }) => {
           Add to Cart
         </button>
       ) : (
-        <button onClick={handleCart} className="btn-add-remove-cart">
-          <div onClick={handleSubtract} className="btn-subtract">
+        <div className="btn-add-remove-cart">
+          <button onClick={handleSubtract} className="btn-subtract">
             -
-          </div>
+          </button>
           <span>{orderAmount}</span>
-          <div onClick={handleAdd} className="btn-add">
+          <button onClick={() => handleAdd(item)} className="btn-add">
             +
-          </div>
-        </button>
+          </button>
+        </div>
       )}
 
       <div className="item-info">
