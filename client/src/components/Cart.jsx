@@ -1,19 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import emptyCart from "../imgs/illustration-empty-cart.svg";
 import deleteIcon from "../imgs/icon-remove-item.svg";
 import useCartStore from "../stores/cartStore";
 import carbon from "../imgs/icon-carbon-neutral.svg";
+import OrderConfirmed from "./OrderConfirmed";
 
 const Cart = () => {
+  const [showComponent, setShowComponent] = useState(false);
   const cartItems = useCartStore((state) => state.cartItems);
   const removeItem = useCartStore((state) => state.removeItem);
   const totalQuantity = cartItems.reduce((acc, item) => acc + item.quantity, 0);
-  const totalAmount = cartItems.reduce(
-    (acc, item) => acc + item.quantity * item.price,
-    0
-  );
+  const totalAmount = useCartStore((state) => state.getTotal());
   const getItemTotal = (itemCost, itemQuantity) => {
     return (itemCost * itemQuantity).toFixed(2);
+  };
+
+  const handleClick = () => {
+    setShowComponent(!showComponent);
   };
   return (
     <div className="cart-container">
@@ -63,7 +66,10 @@ const Cart = () => {
               This is a <span>carbon-neutral</span> delivery
             </p>
           </div>
-          <button className="btn confirm-order-btn">Confirm Order</button>
+          <button onClick={handleClick} className="btn confirm-order-btn">
+            Confirm Order
+          </button>
+          {showComponent && <OrderConfirmed />}
         </div>
       )}
     </div>

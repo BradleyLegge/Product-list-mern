@@ -3,6 +3,7 @@ import items from "../data.json";
 import useCartShop from "../stores/cartStore";
 
 const Items = () => {
+  const cartItems = useCartShop((state) => state.cartItems);
   const addToCart = useCartShop((state) => state.addToCart);
   const decreaseQuantity = useCartShop((state) => state.decreaseQuantity);
   const increaseQuantity = useCartShop((state) => state.increaseQuantity);

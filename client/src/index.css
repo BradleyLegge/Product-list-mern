@@ -396,6 +396,107 @@ h1 {
   border: 1px solid var(--rose-400);
 }
 
+/* Order Confirmed */
+
+.order-confirmed-title{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.order-confirmed-h2{
+  font-size: 32px;
+  color: var(--rose-900);
+}
+
+.order-confirmed-enjoy{
+  font-size: 16px;
+  color: var(--rose-400)
+}
+
+.order-confirmed-container{
+  padding: 20px;
+  border-radius: 10px;
+  position: absolute;
+  width: 35%;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.order-confirmed-icon{
+  width: 10%;
+}
+
+.order-confirmed-divider{
+  margin: 0 20px;
+}
+
+.order-confirm-div-mega{
+  background: var(--rose-50);
+  border-radius: 10px;
+}
+
+.order-confirm-div-a{
+  display: flex;
+  border-radius: 10px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+}
+
+.order-confirm-img{
+  width: 25%;
+  border-radius: 10px;
+}
+
+.order-confirm-name, .order-confirm-item-total{
+  font-weight: var(--font-w-600);
+  color: var(--rose-900);
+}
+
+.order-confirm-quantity{
+  font-weight: var(--font-w-600);
+  color: var(--red);
+}
+
+.order-confirm-price{
+  color: var(--rose-500);
+}
+
+.order-confirm-div-b{
+  display: flex;
+  gap: 50px;
+}
+
+.order-confirm-div-c{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.order-confirm-div-d{
+  display: flex;
+  gap: 20px;
+}
+
+.order-confirm-total{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 20px;
+  color: var(--rose-900);
+}
+
+.order-confirm-total span{
+  font-size: 28px;
+  font-weight: var(--font-w-700);
+}
+
 /* Pages */
 
 /* Login Page */
