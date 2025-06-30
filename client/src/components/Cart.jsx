@@ -29,23 +29,13 @@ const Cart = () => {
         <div className="items-in-cart-container">
           <h2 className="cart-header">{`Your Cart (${totalQuantity})`}</h2>
           {cartItems.map((item) => (
-            <div>
+            <div key={item.id}>
               <div className="cart-item-ordered">
                 <div className="cart-item-content">
                   <p className="cart-item-name">{item.name}</p>
                   <div className="cart-item-info">
                     <p className="amount-ordered">{`${item.quantity}x`}</p>
                     <p className="item-cost">{`@ $${item.price.toFixed(2)}`}</p>
-<<<<<<< HEAD
-                    <p></p>
-                  </div>
-                </div>
-                <button
-                  onClick={() => removeItem(item.id)}
-                  className="delete-btn"
-                >
-                  <img src={deleteIcon} alt="" />
-=======
                     <p className="item-total-cost">{`$${getItemTotal(
                       item.price,
                       item.quantity
@@ -58,18 +48,11 @@ const Cart = () => {
                     src={deleteIcon}
                     alt=""
                   />
->>>>>>> refs/remotes/origin/main
                 </button>
               </div>
               <div className="divider"></div>
             </div>
           ))}
-<<<<<<< HEAD
-          <div>
-            <p>Order Total</p>
-            <p>{`$${totalAmount.toFixed(2)}`}</p>
-          </div>
-=======
           <div className="order-total-container">
             <p className="order-total">Order Total</p>
             <p className="order-total-price">{`$${totalAmount.toFixed(2)}`}</p>
@@ -81,7 +64,6 @@ const Cart = () => {
             </p>
           </div>
           <button className="btn confirm-order-btn">Confirm Order</button>
->>>>>>> refs/remotes/origin/main
         </div>
       )}
     </div>

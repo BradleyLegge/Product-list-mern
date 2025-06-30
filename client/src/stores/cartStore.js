@@ -14,11 +14,21 @@ const useCartStore = create((set) => ({
       }
       return { cartItems: [...state.cartItems, { ...item, quantity: 1 }] };
     }),
+  increaseQuantity: (id) => 
+    set((state) => ({
+      cartItems: state.cartItems.map((i) => 
+      i.id === id ? {...i, quantity: i.quantity + 1} : i)
+    })),
+  decreaseQuantity: (id) => 
+    set((state) => ({
+      cartItems: state.cartItems.map((i) => 
+      i.id === id ? {...i, quantity: Math.max(1, i.quantity - 1)} : i)
+    })),
   removeItem: (id) =>
     set((state) => ({
       cartItems: state.cartItems.filter((item) => item.id !== id),
     })),
   clearCart: () => set({ cartItems: [] }),
-}));
+  }))
 
 export default useCartStore;
