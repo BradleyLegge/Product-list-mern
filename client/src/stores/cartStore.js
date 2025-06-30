@@ -14,7 +14,7 @@ const useCartStore = create((set) => ({
       }
       return { cartItems: [...state.cartItems, { ...item, quantity: 1 }] };
     }),
-  removeFromCart: (id) =>
+  removeItem: (id) =>
     set((state) => ({
       cartItems: state.cartItems.filter((item) => item.id !== id),
     })),
