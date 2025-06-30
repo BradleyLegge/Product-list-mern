@@ -5,6 +5,7 @@ import useCartStore from "../stores/cartStore";
 
 const Cart = () => {
   const cartItems = useCartStore((state) => state.cartItems);
+  const removeItem = useCartStore((state) => state.removeItem);
   const totalQuantity = cartItems.reduce((acc, item) => acc + item.quantity, 0);
   const totalAmount = cartItems.reduce(
     (acc, item) => acc + item.quantity * item.price,
@@ -32,14 +33,23 @@ const Cart = () => {
                   <div className="cart-item-info">
                     <p className="amount-ordered">{`${item.quantity}x`}</p>
                     <p className="item-cost">{`@ $${item.price.toFixed(2)}`}</p>
-                    <p>{`$${totalAmount.toFixed(2)}`}</p>
+                    <p></p>
                   </div>
                 </div>
-                <img src={deleteIcon} alt="" />
+                <button
+                  onClick={() => removeItem(item.id)}
+                  className="delete-btn"
+                >
+                  <img src={deleteIcon} alt="" />
+                </button>
               </div>
               <div className="divider"></div>
             </div>
           ))}
+          <div>
+            <p>Order Total</p>
+            <p>{`$${totalAmount.toFixed(2)}`}</p>
+          </div>
         </div>
       )}
     </div>
