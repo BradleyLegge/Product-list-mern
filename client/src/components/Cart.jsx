@@ -2,6 +2,7 @@ import React from "react";
 import emptyCart from "../imgs/illustration-empty-cart.svg";
 import deleteIcon from "../imgs/icon-remove-item.svg";
 import useCartStore from "../stores/cartStore";
+import carbon from "../imgs/icon-carbon-neutral.svg";
 
 const Cart = () => {
   const cartItems = useCartStore((state) => state.cartItems);
@@ -11,7 +12,9 @@ const Cart = () => {
     (acc, item) => acc + item.quantity * item.price,
     0
   );
-
+  const getItemTotal = (itemCost, itemQuantity) => {
+    return (itemCost * itemQuantity).toFixed(2);
+  };
   return (
     <div className="cart-container">
       {cartItems.length === 0 ? (
@@ -33,6 +36,7 @@ const Cart = () => {
                   <div className="cart-item-info">
                     <p className="amount-ordered">{`${item.quantity}x`}</p>
                     <p className="item-cost">{`@ $${item.price.toFixed(2)}`}</p>
+<<<<<<< HEAD
                     <p></p>
                   </div>
                 </div>
@@ -41,15 +45,43 @@ const Cart = () => {
                   className="delete-btn"
                 >
                   <img src={deleteIcon} alt="" />
+=======
+                    <p className="item-total-cost">{`$${getItemTotal(
+                      item.price,
+                      item.quantity
+                    )}`}</p>
+                  </div>
+                </div>
+                <button className="remove-item-btn">
+                  <img
+                    onClick={() => removeItem(item.id)}
+                    src={deleteIcon}
+                    alt=""
+                  />
+>>>>>>> refs/remotes/origin/main
                 </button>
               </div>
               <div className="divider"></div>
             </div>
           ))}
+<<<<<<< HEAD
           <div>
             <p>Order Total</p>
             <p>{`$${totalAmount.toFixed(2)}`}</p>
           </div>
+=======
+          <div className="order-total-container">
+            <p className="order-total">Order Total</p>
+            <p className="order-total-price">{`$${totalAmount.toFixed(2)}`}</p>
+          </div>
+          <div className="carbon-container">
+            <img src={carbon} alt="" />
+            <p className="carbon-info">
+              This is a <span>carbon-neutral</span> delivery
+            </p>
+          </div>
+          <button className="btn confirm-order-btn">Confirm Order</button>
+>>>>>>> refs/remotes/origin/main
         </div>
       )}
     </div>

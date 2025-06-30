@@ -240,7 +240,7 @@ h1 {
   color: var(--red);
 }
 
-.btn-add-remove-cart{
+.btn-add-remove-cart {
   position: relative;
   top: -20px;
   margin: auto;
@@ -257,8 +257,8 @@ h1 {
   color: var(--rose-50);
 }
 
-
-.btn-subtract, .btn-add{
+.btn-subtract,
+.btn-add {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -271,7 +271,8 @@ h1 {
   font-size: 24px;
 }
 
-.btn-subtract:hover, .btn-add:hover{
+.btn-subtract:hover,
+.btn-add:hover {
   cursor: pointer;
   background: var(--rose-50);
   color: var(--red);
@@ -309,7 +310,7 @@ h1 {
 
 /* Cart Component */
 
-.cart-container{
+.cart-container {
   display: flex;
   flex-direction: column;
   gap: 50px;
@@ -321,40 +322,78 @@ h1 {
   border-radius: 10px;
 }
 
-.cart-header{
-  color: var(--red)
+.cart-header {
+  color: var(--red);
 }
 
-.empty-cart-info{
+.empty-cart-info {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
 }
 
-.empty-cart-info p{
+.empty-cart-info p {
   color: var(--rose-500);
   font-weight: var(--font-w-600);
 }
 
-.items-in-cart-container{
+.items-in-cart-container {
   display: flex;
   flex-direction: column;
+  gap: 20px;
 }
 
-.cart-item-ordered{
+.cart-item-ordered {
   display: flex;
   justify-content: space-between;
 }
 
-.cart-item-info{
+.cart-item-info {
   display: flex;
   gap: 20px;
 }
 
-.divider{
+.divider {
   margin: 10px 0;
   border: 1px solid var(--rose-100);
+}
+
+.order-total-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-total-price {
+  font-weight: var(--font-w-700);
+  font-size: 24px;
+}
+
+.carbon-info {
+  font-size: 14px;
+}
+
+.carbon-info span {
+  font-weight: var(--font-w-600);
+}
+
+.carbon-container {
+  border-radius: 5px;
+  background: var(--rose-100);
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.remove-item-btn {
+  cursor: pointer;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--rose-400);
 }
 
 /* Pages */
@@ -371,7 +410,7 @@ h1 {
 
 /* Shop Page */
 
-.shop-page-content{
+.shop-page-content {
   display: flex;
   padding-right: 100px;
 }
